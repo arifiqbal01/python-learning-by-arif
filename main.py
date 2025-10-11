@@ -8,4 +8,24 @@ def get_choices():
   return choices
 
 def check_win(player, computer):
-  return [player, computer]
+  print(f"player chosed {player} computer chosed {computer}")
+  if player == computer:
+    return ("it's a tie!")
+  elif player == "rock": 
+    if computer == "scissors":
+      return ("rock smashes scissors. You win")
+    else:
+      return ("Paper cover rock. you loose")
+  elif player == "paper":
+    if computer == "rock":
+      return ("paper covers rock. You loos")
+    else:
+      return ("Scissors cut paper. you loose")
+  elif player == "scissors":
+    if computer == "paper":
+      return ("paper covers rock. You loos")
+    else:
+      return ("Scissors cut paper. you loose")
+    
+check_win("rock", "paper")
+  
