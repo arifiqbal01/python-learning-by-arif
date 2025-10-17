@@ -1,3 +1,4 @@
+from enum import Enum
 # variables
 name = "Beau" # whole line is called statement
 age = 25
@@ -118,3 +119,62 @@ print(my_name[-1])
 print(my_name[:6])
 print(my_name[7:])
 
+# Bolean 
+ # in number only 0 are false
+ # only empty strings are false
+ # dictioneries are false only when empty
+done = ""
+print(type(done) == bool)
+if done:
+  print("yes")
+else:
+  print("no")
+
+ingrediants_present = True
+meal_cooked = False
+check_taste = all([ingrediants_present, meal_cooked])
+print(check_taste)
+
+# Number Data Types
+  # int, float, complex
+num1 = 2+3j
+num2 = complex(2,3)
+print(num1.real, num2.imag)
+
+ # build in functions that help in numbers
+print(abs(-5.5)) # provide absolute number value
+print(round(3.45, 1)) # provide rounded number 
+
+# enums = readable names that bound to constant value
+class State(Enum):
+  Inactive = 0
+  Active = 1
+print(State.Active.value)
+print(State['Active'])
+print(list(State))
+print(len(State))
+
+# user inputs
+# age = input("what is your age ")
+# print("your age is " + age)
+
+# control statements
+condition5 = False
+if condition5 == True:
+  print("conditon met")
+  print("hurry")
+else:
+  print(" it was not true")
+
+
+condition6 = True
+name = "jonn"
+if condition6:
+  print("conditon6 met")
+  print("hurry 6")
+elif name == "roger":
+  print("it has name roger")
+elif name == "jon":
+  print("it has name jon")
+else:
+  print("does not match any name")
