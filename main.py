@@ -178,3 +178,73 @@ elif name == "jon":
   print("it has name jon")
 else:
   print("does not match any name")
+
+# lists
+dogs = ["roger", 1, "syd", True, "quicy", 7]
+print("rogers" in dogs)
+print(dogs[2])
+dogs[0] = "roger update"
+print(dogs)
+print(dogs[2:5])
+print(len(dogs))
+dogs.append("puppy")
+dogs.extend(["puppy", 5])
+dogs += ["new puppy", 10]
+print(dogs)
+dogs.remove("syd")
+dogs.remove("new puppy")
+print(dogs)
+print(dogs.pop(7))
+print(dogs)
+
+items = ["fruits", "vegetables", "meat", "chicken", "milk", "eggs"]
+items.insert(2, "Test")
+print(items)
+items[1:1] = ["test002", "test003"]
+print(items)
+
+# Sorting list
+itemscopy = items[:]
+items.sort(key=str.lower)
+print(itemscopy)
+print(items)
+ 
+print(sorted(items, key=str.lower))
+
+# Tuples     ## they are like list but can't change
+names = ("Roger", "Syd", "Beau")
+
+print(names[-1])
+print(names.index("Roger"))
+
+print(len(names))
+print("Roger" in names)
+print(sorted(names))
+
+newTuple = names + ("tina", "gena")
+print(newTuple)
+
+# Dictionaries ## key value pairs
+dog = {"name": "Roger", "age": "8", "color": "green"}
+print(dog["name"])
+dog["name"] = "sheru"
+print(dog) 
+  # they can have default values
+print(dog.get("color", "brown"))
+# print(dog.pop("name")) 
+
+print("color" in dog)
+# print(dog.popitem())
+print(dog)
+
+print(dog.keys())
+print(list(dog.keys()))
+print(dog.values())
+print(list(dog.values()))
+print(list(dog.items()))
+print(len(dog))
+dog["food"] = "meat"
+print(dog)
+del dog['color']
+dogcopy = dog.copy()
+print(dog)
