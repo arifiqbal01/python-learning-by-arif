@@ -211,7 +211,7 @@ print(items)
  
 print(sorted(items, key=str.lower))
 
-# Tuples     ## they are like list but can't change
+# Tuples     ## they are like list but can't change, they are ordered
 names = ("Roger", "Syd", "Beau")
 
 print(names[-1])
@@ -248,3 +248,79 @@ print(dog)
 del dog['color']
 dogcopy = dog.copy()
 print(dog)
+
+# sets
+ # mutable, not ordered, don't have keys
+ # they are like math sets, intersects/unision
+ # does not allow same item two time
+set1 = {"roger", "john", "luna"}
+set2 = {"roger", }
+
+intersect = set1 and set2
+print(intersect)
+
+mod = set1 | set2
+print(mod)
+
+mod1 = set1 - set2
+print(mod1)
+
+mod2 = set1 < set2
+print(mod2)
+print(len(set1))
+print(list(set1))
+
+# Functions
+ # set of instructions to run something
+def hello(name="my friend", age="12"):
+  print("hello " + name + ", " + "your age is " + str(age))
+hello("arif", 27)
+
+def heyhi(name):
+  print("my name is " + name)
+  return name
+  
+print(heyhi("arif"))
+
+  # Variable Scope
+age = 12 #global scope variable
+def yourAge():
+  print(age)
+  print(age)
+yourAge()
+
+def myAge():
+  myage = 27 # local scope variable
+  print(myage)
+myAge()
+
+  # Nested functioin
+def talk(phrase):
+    def say(word):
+      print(word)
+    words = phrase.split(' ')
+    for word in words:
+      say(word)
+      
+talk("I'm talking to him now")
+
+def count():
+  count = 0
+  def increment():
+    nonlocal count # to use non local variable
+    count = count + 12
+    print(count)
+  increment()
+count()
+
+def counter():
+  count = 0
+  def increment():
+    nonlocal count 
+    count = count + 1
+    return count
+  return increment 
+increment = counter()
+print(increment())
+print(increment())
+print(increment())
