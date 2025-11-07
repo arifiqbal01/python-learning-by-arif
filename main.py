@@ -324,3 +324,80 @@ increment = counter()
 print(increment())
 print(increment())
 print(increment())
+
+# Objects
+age = 8
+print(age.real)
+print(age.bit_length())
+
+items = [1, 2]
+items.append(3)
+items.pop()
+print(id(items))
+
+# loops
+  # while and for loops
+condition10 = True
+while condition10:
+  print("the condition is true")
+  condition10 = False
+
+count11 = 0
+while count11 < 10:
+  print("the condition is true")
+  count11 += 1
+  
+print("after loop")  
+
+itemItems = [1, 2, 3, 4]
+for itemItem in itemItems:
+  print(itemItem)
+
+for itemItem in range(3):
+  print(itemItem)
+
+
+itemItemss = ["gajjar", "molli", 3, 4]
+for index, itemItem in enumerate(itemItemss):
+  print(index, itemItem)
+
+  # Conitnue and Break    #loop control statements
+    # continue: It does not stop the loop; instead, it jumps to the next iteration, ignoring the remaining code below it in that cycle. Skip this one — move to the next!
+
+    # break: terminates the loop immediately, no matter if the condition is still true or not.
+
+for i in range(1, 6):
+  if i == 3:
+      break
+  print(i)
+
+for g in range(1, 6):
+  if g == 3:
+      continue
+  print(g)
+
+
+# Class
+class Animal:
+  def walk(self):
+    print("walking...")
+    
+class Dog(Animal):
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+    
+  def bark(self):
+    print("Woof!")
+    
+
+roger = Dog("Roger", 5)
+print(roger.name)
+print(roger.age)
+roger.walk()
+roger.bark()
+
+gini = Dog("Gini", 4)
+print(gini.name)
+print(gini.age)
+gini.bark()
