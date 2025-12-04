@@ -159,3 +159,38 @@ __xor__() respond to the ^ operator
 
 """
 
+num1 = 2+3j
+num2 = complex(2,3)
+print(num1.real, num2.imag)
+
+age = 22
+while age > 20:
+  print("Adult", age)
+  age -= 1
+print("age does not satisfy condition")
+
+boys = ["sohail", "shanu", "sikandar"]
+for boy in boys:
+  your_boy = boys[1]
+print(your_boy)
+
+list = [1, 2, 3, 4, 5]
+sums_up = 0
+for i in list:
+  sums_up += i
+print(sums_up)
+
+numbers = [1, 2, 3, 4, 5]
+max_up = 0
+for i in numbers:
+  max_up += i * i
+print(max_up)
+
+random_list = [1, 3, 45, 23, 7]
+def numberSquare():
+  squareList = []
+  for a in random_list:
+    single_item = a ** 2
+    squareList.append(single_item)
+  print(squareList)
+numberSquare()
