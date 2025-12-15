@@ -1,6 +1,8 @@
 import argparse
 from math import sqrt
+from os import name
 from re import error
+from typing import Self
 from lib import dog
 from functools import reduce
 import time
@@ -194,3 +196,64 @@ def numberSquare():
     squareList.append(single_item)
   print(squareList)
 numberSquare()
+
+fruits = ['mango', ' banana', 'apple']
+for f in fruits:
+  if f == 'banana':
+    continue
+  print("fruits: " + f + " banana skiped")
+
+class Animal:
+  def walking(self):
+    print("walking...")
+    return self
+    
+  def eat(self):
+    print("eating...")
+    return self
+
+class Dog(Animal):
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+    
+  def bark(self):
+    print("Woof, Woff..")
+    return self
+  
+  def sound(self):
+    print("Woof, Woff..")
+
+  def introduce(self):
+    print(f"My name is {self.name} and my age is {self.age}")
+    return self
+  
+  def human_age(self):
+    print(self.age * 7)
+
+class Cat(Animal):
+  def __init__(self, name, color):
+    self.name = name
+    self.color = color
+  
+  def meow(self):
+    print("Meow meow..")
+    return self
+  
+  def sound(self):
+    print("Meow meow..")
+
+def make_sound(Animal):
+  Animal.sound()
+
+d1 = Dog("Buddy", 8)
+c1 = Cat("Mimi", "White")
+d1.introduce()
+d1.walking()
+d1.bark()
+c1.walking().meow()
+d1.eat()
+c1.eat()
+d1.human_age()
+make_sound(d1)
+make_sound(c1)

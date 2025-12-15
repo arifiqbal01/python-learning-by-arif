@@ -361,7 +361,7 @@ itemItemss = ["gajjar", "molli", 3, 4]
 for index, itemItem in enumerate(itemItemss):
   print(index, itemItem)
 
-  # Conitnue and Break    #loop control statements
+  # Continue and Break    #loop control statements
     # continue: It does not stop the loop; instead, it jumps to the next iteration, ignoring the remaining code below it in that cycle. Skip this one — move to the next!
 
     # break: terminates the loop immediately, no matter if the condition is still true or not.
